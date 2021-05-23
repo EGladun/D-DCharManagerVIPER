@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FA448E23265A89AB0074D015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E22265A89AB0074D015 /* AppDelegate.swift */; };
-		FA448E25265A89AB0074D015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E24265A89AB0074D015 /* SceneDelegate.swift */; };
-		FA448E27265A89AB0074D015 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E26265A89AB0074D015 /* ViewController.swift */; };
 		FA448E2A265A89AB0074D015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA448E28265A89AB0074D015 /* Main.storyboard */; };
 		FA448E2C265A89AF0074D015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA448E2B265A89AF0074D015 /* Assets.xcassets */; };
 		FA448E2F265A89AF0074D015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA448E2D265A89AF0074D015 /* LaunchScreen.storyboard */; };
 		FA448E3A265A89B00074D015 /* D_DCharManagerVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E39265A89B00074D015 /* D_DCharManagerVIPERTests.swift */; };
 		FA448E45265A89B00074D015 /* D_DCharManagerVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E44265A89B00074D015 /* D_DCharManagerVIPERUITests.swift */; };
+		FA448E60265A8BCC0074D015 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E5C265A8BCC0074D015 /* UIViewControllerExtension.swift */; };
+		FA448E61265A8BCC0074D015 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E5D265A8BCC0074D015 /* NSObjectExtensions.swift */; };
+		FA448E62265A8BCC0074D015 /* UITableViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E5E265A8BCC0074D015 /* UITableViewExtentions.swift */; };
+		FA448E63265A8BCC0074D015 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E5F265A8BCC0074D015 /* UIViewExtensions.swift */; };
+		FA448E67265A8C470074D015 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E64265A8C460074D015 /* BaseController.swift */; };
+		FA448E69265A8C470074D015 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E66265A8C470074D015 /* Presentable.swift */; };
+		FA448E6B265A8C940074D015 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E6A265A8C940074D015 /* GameCharacter.swift */; };
+		FA448E6D265A8CA70074D015 /* CharStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E6C265A8CA70074D015 /* CharStats.swift */; };
+		FA448E70265A8CB60074D015 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E6E265A8CB60074D015 /* Router.swift */; };
+		FA448E71265A8CB60074D015 /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E6F265A8CB60074D015 /* RouterImp.swift */; };
+		FA448E73265A8D1A0074D015 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E72265A8D1A0074D015 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +46,6 @@
 /* Begin PBXFileReference section */
 		FA448E1F265A89AB0074D015 /* D&DCharManagerVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&DCharManagerVIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA448E22265A89AB0074D015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA448E24265A89AB0074D015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA448E26265A89AB0074D015 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA448E29265A89AB0074D015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA448E2B265A89AF0074D015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA448E2E265A89AF0074D015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		FA448E40265A89B00074D015 /* D&DCharManagerVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "D&DCharManagerVIPERUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA448E44265A89B00074D015 /* D_DCharManagerVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DCharManagerVIPERUITests.swift; sourceTree = "<group>"; };
 		FA448E46265A89B00074D015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA448E5C265A8BCC0074D015 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FA448E5D265A8BCC0074D015 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		FA448E5E265A8BCC0074D015 /* UITableViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtentions.swift; sourceTree = "<group>"; };
+		FA448E5F265A8BCC0074D015 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		FA448E64265A8C460074D015 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		FA448E66265A8C470074D015 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		FA448E6A265A8C940074D015 /* GameCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
+		FA448E6C265A8CA70074D015 /* CharStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharStats.swift; sourceTree = "<group>"; };
+		FA448E6E265A8CB60074D015 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FA448E6F265A8CB60074D015 /* RouterImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
+		FA448E72265A8D1A0074D015 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,16 @@
 		FA448E21265A89AB0074D015 /* D&DCharManagerVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				FA448E22265A89AB0074D015 /* AppDelegate.swift */,
-				FA448E24265A89AB0074D015 /* SceneDelegate.swift */,
-				FA448E26265A89AB0074D015 /* ViewController.swift */,
-				FA448E28265A89AB0074D015 /* Main.storyboard */,
+				FA448E52265A8A450074D015 /* Application */,
+				FA448E5A265A8AC80074D015 /* Router */,
+				FA448E57265A8AB10074D015 /* Managers */,
+				FA448E53265A8A7E0074D015 /* Extensions */,
+				FA448E5B265A8ACF0074D015 /* Storyboards */,
+				FA448E55265A8A900074D015 /* Flows */,
+				FA448E54265A8A870074D015 /* CustomViews */,
+				FA448E56265A8AA60074D015 /* Factories */,
+				FA448E59265A8ABD0074D015 /* ParentsAndProtocols */,
+				FA448E58265A8AB70074D015 /* Models */,
 				FA448E2B265A89AF0074D015 /* Assets.xcassets */,
 				FA448E2D265A89AF0074D015 /* LaunchScreen.storyboard */,
 				FA448E30265A89AF0074D015 /* Info.plist */,
@@ -126,6 +150,89 @@
 				FA448E46265A89B00074D015 /* Info.plist */,
 			);
 			path = "D&DCharManagerVIPERUITests";
+			sourceTree = "<group>";
+		};
+		FA448E52265A8A450074D015 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FA448E22265A89AB0074D015 /* AppDelegate.swift */,
+				FA448E72265A8D1A0074D015 /* Coordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FA448E53265A8A7E0074D015 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA448E5D265A8BCC0074D015 /* NSObjectExtensions.swift */,
+				FA448E5E265A8BCC0074D015 /* UITableViewExtentions.swift */,
+				FA448E5C265A8BCC0074D015 /* UIViewControllerExtension.swift */,
+				FA448E5F265A8BCC0074D015 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA448E54265A8A870074D015 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FA448E55265A8A900074D015 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		FA448E56265A8AA60074D015 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		FA448E57265A8AB10074D015 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FA448E58265A8AB70074D015 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA448E6A265A8C940074D015 /* GameCharacter.swift */,
+				FA448E6C265A8CA70074D015 /* CharStats.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA448E59265A8ABD0074D015 /* ParentsAndProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA448E64265A8C460074D015 /* BaseController.swift */,
+				FA448E66265A8C470074D015 /* Presentable.swift */,
+			);
+			path = ParentsAndProtocols;
+			sourceTree = "<group>";
+		};
+		FA448E5A265A8AC80074D015 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FA448E6E265A8CB60074D015 /* Router.swift */,
+				FA448E6F265A8CB60074D015 /* RouterImp.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FA448E5B265A8ACF0074D015 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA448E28265A89AB0074D015 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +365,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA448E27265A89AB0074D015 /* ViewController.swift in Sources */,
+				FA448E62265A8BCC0074D015 /* UITableViewExtentions.swift in Sources */,
+				FA448E69265A8C470074D015 /* Presentable.swift in Sources */,
+				FA448E70265A8CB60074D015 /* Router.swift in Sources */,
+				FA448E63265A8BCC0074D015 /* UIViewExtensions.swift in Sources */,
+				FA448E71265A8CB60074D015 /* RouterImp.swift in Sources */,
+				FA448E6D265A8CA70074D015 /* CharStats.swift in Sources */,
+				FA448E60265A8BCC0074D015 /* UIViewControllerExtension.swift in Sources */,
 				FA448E23265A89AB0074D015 /* AppDelegate.swift in Sources */,
-				FA448E25265A89AB0074D015 /* SceneDelegate.swift in Sources */,
+				FA448E73265A8D1A0074D015 /* Coordinator.swift in Sources */,
+				FA448E6B265A8C940074D015 /* GameCharacter.swift in Sources */,
+				FA448E67265A8C470074D015 /* BaseController.swift in Sources */,
+				FA448E61265A8BCC0074D015 /* NSObjectExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U4Z9JL424;
 				INFOPLIST_FILE = "D&DCharManagerVIPER/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "egladunov.D-DCharManagerVIPER";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U4Z9JL424;
 				INFOPLIST_FILE = "D&DCharManagerVIPER/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +583,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "egladunov.D-DCharManagerVIPER";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
