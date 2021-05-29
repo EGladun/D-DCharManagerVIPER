@@ -18,6 +18,27 @@ class CharacterDetailPresenter {
         controller?.setupFromPresenter(data: model)
     }
     
+    func makeQRAndShow(with string: String) {
+        if let qrcode = generateQRCode(from: string) {
+            controller?.showQRCode(code: qrcode)
+        }
+    }
+    
+    private func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.utf8)
+        
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 5, y: 5)
+            
+            if let output = filter.outputImage?.transformed(by: transform) {
+                return UIImage(ciImage: output)
+            }
+        }
+        
+        return nil
+    }
+    
 }
 
 struct CharacterDetailModel {

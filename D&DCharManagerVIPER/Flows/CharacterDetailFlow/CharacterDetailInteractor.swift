@@ -19,4 +19,8 @@ class CharacterDetailInteractor {
         presenter?.makeStructAndLoad(hero: hero)
     }
     
+    func generateQr(with string: String) {
+        presenter?.makeQRAndShow(with: string)
+    }
+    
 }

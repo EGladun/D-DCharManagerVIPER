@@ -17,6 +17,8 @@
 		FA38AA6B26622FD70020354E /* CharacterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA6A26622FD70020354E /* CharacterDetailController.swift */; };
 		FA38AA6D26622FF30020354E /* CharacterDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA6C26622FF30020354E /* CharacterDetailInteractor.swift */; };
 		FA38AA6F266230250020354E /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA6E266230250020354E /* CharacterDetailPresenter.swift */; };
+		FA38AA722662530E0020354E /* QRCOdeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA702662530D0020354E /* QRCOdeController.swift */; };
+		FA38AA732662530E0020354E /* QRCOdeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA38AA712662530E0020354E /* QRCOdeController.xib */; };
 		FA448E23265A89AB0074D015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E22265A89AB0074D015 /* AppDelegate.swift */; };
 		FA448E2A265A89AB0074D015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA448E28265A89AB0074D015 /* Main.storyboard */; };
 		FA448E2C265A89AF0074D015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA448E2B265A89AF0074D015 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		FA38AA6A26622FD70020354E /* CharacterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailController.swift; sourceTree = "<group>"; };
 		FA38AA6C26622FF30020354E /* CharacterDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInteractor.swift; sourceTree = "<group>"; };
 		FA38AA6E266230250020354E /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
+		FA38AA702662530D0020354E /* QRCOdeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCOdeController.swift; sourceTree = "<group>"; };
+		FA38AA712662530E0020354E /* QRCOdeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCOdeController.xib; sourceTree = "<group>"; };
 		FA448E1F265A89AB0074D015 /* D&DCharManagerVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&DCharManagerVIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA448E22265A89AB0074D015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA448E29265A89AB0074D015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				FA38AA6A26622FD70020354E /* CharacterDetailController.swift */,
 				FA38AA6C26622FF30020354E /* CharacterDetailInteractor.swift */,
 				FA38AA6E266230250020354E /* CharacterDetailPresenter.swift */,
+				FA38AA702662530D0020354E /* QRCOdeController.swift */,
+				FA38AA712662530E0020354E /* QRCOdeController.xib */,
 			);
 			path = CharacterDetailFlow;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				FA448E2F265A89AF0074D015 /* LaunchScreen.storyboard in Resources */,
 				FA448E75265A8F780074D015 /* GoogleService-Info.plist in Resources */,
 				FA38AA68265F02A20020354E /* CharacterCell.xib in Resources */,
+				FA38AA732662530E0020354E /* QRCOdeController.xib in Resources */,
 				FA448E2C265A89AF0074D015 /* Assets.xcassets in Resources */,
 				FA448E2A265A89AB0074D015 /* Main.storyboard in Resources */,
 			);
@@ -454,6 +461,7 @@
 				FA448E71265A8CB60074D015 /* RouterImp.swift in Sources */,
 				FA448E6D265A8CA70074D015 /* CharStats.swift in Sources */,
 				FA38AA6B26622FD70020354E /* CharacterDetailController.swift in Sources */,
+				FA38AA722662530E0020354E /* QRCOdeController.swift in Sources */,
 				FA448E60265A8BCC0074D015 /* UIViewControllerExtension.swift in Sources */,
 				FA448E23265A89AB0074D015 /* AppDelegate.swift in Sources */,
 				FA448E73265A8D1A0074D015 /* Coordinator.swift in Sources */,

@@ -60,10 +60,17 @@ class CharacterDetailController: UIViewController {
         
         textForSharing = data.shareText
     }
+    
+    func showQRCode(code: UIImage) {
+        let vc = QRCOdeController()
+        vc.loadImage(code)
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true, completion: nil)
+    }
 
     //MARK: Actions
     @IBAction func shareHandler(_ sender: Any) {
-        //
+        interactor?.generateQr(with: textForSharing)
     }
     
     @IBAction func backHandler(_ sender: Any) {
