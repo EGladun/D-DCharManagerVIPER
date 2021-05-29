@@ -13,6 +13,7 @@ class ApplicationCoordinator {
     private var factory = ControllersFactory()
     
     private var charListView: CharactersListController?
+    private var charDetailView: CharacterDetailController?
     
     init(router: Router) {
         self.router = router
@@ -41,7 +42,15 @@ class ApplicationCoordinator {
     }
     
     private func runHeroDetailFlow(hero: HeroCharacter) {
-        print("heroDetailFlow")
+        charDetailView = factory.makeCharacterDetailController()
+        
+        charDetailView?.onBack = { [weak self] in
+            self?.router.popModule()
+        }
+        
+        charDetailView?.hero = hero
+        
+        router.push(charDetailView)
     }
 }
 

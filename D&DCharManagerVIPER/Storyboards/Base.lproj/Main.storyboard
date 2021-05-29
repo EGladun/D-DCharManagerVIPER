@@ -81,14 +81,15 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNv-Jy-eDV">
-                                        <rect key="frame" x="358" y="5" width="40" height="40"/>
+                                        <rect key="frame" x="348" y="5" width="50" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ZhE-UB-eRd"/>
-                                            <constraint firstAttribute="width" constant="40" id="gU5-XR-VxY"/>
+                                            <constraint firstAttribute="width" constant="50" id="gU5-XR-VxY"/>
                                         </constraints>
-                                        <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
                                         <connections>
-                                            <action selector="shareButton:" destination="BQw-gj-akX" eventType="touchUpInside" id="NYc-2w-HQf"/>
                                             <action selector="shareHandler:" destination="BQw-gj-akX" eventType="touchUpInside" id="vYd-xq-ajH"/>
                                         </connections>
                                     </button>
@@ -98,7 +99,9 @@
                                             <constraint firstAttribute="width" constant="40" id="AZC-8E-HSa"/>
                                             <constraint firstAttribute="height" constant="40" id="nb6-rg-FIU"/>
                                         </constraints>
-                                        <state key="normal" image="arrowtriangle.left.fill" catalog="system"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="backHandler:" destination="BQw-gj-akX" eventType="touchUpInside" id="UnX-fY-dDp"/>
                                         </connections>
@@ -227,8 +230,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

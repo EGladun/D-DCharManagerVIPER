@@ -15,4 +15,8 @@ class CharacterDetailInteractor {
         self.presenter = presenter
     }
     
+    func makeHeroDetail(hero: HeroCharacter) {
+        presenter?.makeStructAndLoad(hero: hero)
+    }
+    
 }
