@@ -17,4 +17,7 @@ class ControllersFactory {
         return CharacterDetailController.controllerFromStoryboard(.main)
     }
     
+    func makeCharacterAddController() -> CharacterAddController {
+        return CharacterAddController.controllerFromStoryboard(.main)
+    }
 }

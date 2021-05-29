@@ -14,6 +14,7 @@ class ApplicationCoordinator {
     
     private var charListView: CharactersListController?
     private var charDetailView: CharacterDetailController?
+    private var charAddView: CharacterAddController?
     
     init(router: Router) {
         self.router = router
@@ -38,7 +39,9 @@ class ApplicationCoordinator {
     }
     
     private func runNewHeroFlow() {
-        print("newHeroFlow")
+        charAddView = factory.makeCharacterAddController()
+        
+        router.push(charAddView)
     }
     
     private func runHeroDetailFlow(hero: HeroCharacter) {
