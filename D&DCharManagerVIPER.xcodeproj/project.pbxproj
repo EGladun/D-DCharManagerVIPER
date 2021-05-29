@@ -14,6 +14,9 @@
 		FA38AA61265EF8220020354E /* ControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA60265EF8220020354E /* ControllersFactory.swift */; };
 		FA38AA67265F02A20020354E /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA65265F02A20020354E /* CharacterCell.swift */; };
 		FA38AA68265F02A20020354E /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA38AA66265F02A20020354E /* CharacterCell.xib */; };
+		FA38AA6B26622FD70020354E /* CharacterDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA6A26622FD70020354E /* CharacterDetailController.swift */; };
+		FA38AA6D26622FF30020354E /* CharacterDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA6C26622FF30020354E /* CharacterDetailInteractor.swift */; };
+		FA38AA6F266230250020354E /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AA6E266230250020354E /* CharacterDetailPresenter.swift */; };
 		FA448E23265A89AB0074D015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA448E22265A89AB0074D015 /* AppDelegate.swift */; };
 		FA448E2A265A89AB0074D015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA448E28265A89AB0074D015 /* Main.storyboard */; };
 		FA448E2C265A89AF0074D015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA448E2B265A89AF0074D015 /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		FA38AA60265EF8220020354E /* ControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersFactory.swift; sourceTree = "<group>"; };
 		FA38AA65265F02A20020354E /* CharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		FA38AA66265F02A20020354E /* CharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		FA38AA6A26622FD70020354E /* CharacterDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailController.swift; sourceTree = "<group>"; };
+		FA38AA6C26622FF30020354E /* CharacterDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInteractor.swift; sourceTree = "<group>"; };
+		FA38AA6E266230250020354E /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
 		FA448E1F265A89AB0074D015 /* D&DCharManagerVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&DCharManagerVIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA448E22265A89AB0074D015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA448E29265A89AB0074D015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +141,16 @@
 				FA38AA66265F02A20020354E /* CharacterCell.xib */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		FA38AA6926622FB90020354E /* CharacterDetailFlow */ = {
+			isa = PBXGroup;
+			children = (
+				FA38AA6A26622FD70020354E /* CharacterDetailController.swift */,
+				FA38AA6C26622FF30020354E /* CharacterDetailInteractor.swift */,
+				FA38AA6E266230250020354E /* CharacterDetailPresenter.swift */,
+			);
+			path = CharacterDetailFlow;
 			sourceTree = "<group>";
 		};
 		FA448E16265A89AB0074D015 = {
@@ -227,6 +243,7 @@
 		FA448E55265A8A900074D015 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				FA38AA6926622FB90020354E /* CharacterDetailFlow */,
 				FA38AA59265EF5380020354E /* CharactersListFlow */,
 			);
 			path = Flows;
@@ -429,11 +446,14 @@
 				FA448E70265A8CB60074D015 /* Router.swift in Sources */,
 				FA38AA67265F02A20020354E /* CharacterCell.swift in Sources */,
 				FA38AA61265EF8220020354E /* ControllersFactory.swift in Sources */,
+				FA38AA6D26622FF30020354E /* CharacterDetailInteractor.swift in Sources */,
 				FA38AA5D265EF5FC0020354E /* CharactersListInteractor.swift in Sources */,
 				FA38AA5B265EF58D0020354E /* CharactersListController.swift in Sources */,
+				FA38AA6F266230250020354E /* CharacterDetailPresenter.swift in Sources */,
 				FA448E63265A8BCC0074D015 /* UIViewExtensions.swift in Sources */,
 				FA448E71265A8CB60074D015 /* RouterImp.swift in Sources */,
 				FA448E6D265A8CA70074D015 /* CharStats.swift in Sources */,
+				FA38AA6B26622FD70020354E /* CharacterDetailController.swift in Sources */,
 				FA448E60265A8BCC0074D015 /* UIViewControllerExtension.swift in Sources */,
 				FA448E23265A89AB0074D015 /* AppDelegate.swift in Sources */,
 				FA448E73265A8D1A0074D015 /* Coordinator.swift in Sources */,

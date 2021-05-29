@@ -8,15 +8,11 @@
 import Foundation
 import UIKit
 
-protocol CharactersPresenterDelegate: AnyObject {
-    func reloadTableView(with data: [HeroCharacter])
-}
-
 class CharactersListPresenter {
     
-    open weak var delegate: CharactersPresenterDelegate?
+    open weak var controller: CharactersListController?
     
     func updateHeroesArray(array: [HeroCharacter]) {
-        delegate?.reloadTableView(with: array)
+        controller?.reloadTableView(with: array)
     }
 }

@@ -25,8 +25,23 @@ class ApplicationCoordinator {
     private func runListFlow() {
         charListView = factory.makeCharactersListController()
         
+        charListView?.onNewHero = { [weak self] in
+            self?.runNewHeroFlow()
+        }
+        
+        charListView?.onHeroDetail = { [weak self] hero in
+            self?.runHeroDetailFlow(hero: hero)
+        }
+        
         router.push(charListView)
     }
     
+    private func runNewHeroFlow() {
+        print("newHeroFlow")
+    }
+    
+    private func runHeroDetailFlow(hero: HeroCharacter) {
+        print("heroDetailFlow")
+    }
 }
 

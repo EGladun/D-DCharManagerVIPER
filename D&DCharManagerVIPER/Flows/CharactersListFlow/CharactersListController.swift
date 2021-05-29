@@ -8,14 +8,19 @@
 import UIKit
 
 class CharactersListController: UIViewController {
-    
+    //MARK: Outlets
     @IBOutlet weak var charactersTable: UITableView!
     
+    //MARK: Variables
     var interactor: CharactersListInteractor?
     var presenter: CharactersListPresenter?
     
+    var onNewHero: (()->Void)?
+    var onHeroDetail: ((HeroCharacter)->Void)?
+    
     var heroesArray: [HeroCharacter] = []
 
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,9 +34,10 @@ class CharactersListController: UIViewController {
         interactor?.fetchCharacters()
     }
     
+    //MARK: Methods
     private func setupModule() {
         presenter = CharactersListPresenter()
-        presenter?.delegate = self
+        presenter?.controller = self
         guard presenter != nil else { return }
         interactor = CharactersListInteractor(presenter: presenter!)
     }
@@ -41,19 +47,19 @@ class CharactersListController: UIViewController {
         charactersTable.dataSource = self
         charactersTable.registerCellNib(CharacterCell.self)
     }
-
-    @IBAction func plusButtonHandler(_ sender: Any) {
-        //
-    }
-}
-
-extension CharactersListController: CharactersPresenterDelegate {
+    
     func reloadTableView(with data: [HeroCharacter]) {
         heroesArray = data
         charactersTable.reloadData()
     }
+
+    //MARK: Actions
+    @IBAction func plusButtonHandler(_ sender: Any) {
+        onNewHero?()
+    }
 }
 
+//MARK: Extensions
 extension CharactersListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,4 +73,17 @@ extension CharactersListController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < heroesArray.count else {
+            return
+        }
+        let hero = heroesArray[indexPath.row]
+        onHeroDetail?(hero)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //
+        }
+    }
 }
