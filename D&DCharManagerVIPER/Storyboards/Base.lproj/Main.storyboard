@@ -252,7 +252,7 @@
                                 <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dv-uh-UxW" userLabel="Content">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="741"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaN-eu-lR4">
                                                 <rect key="frame" x="16" y="16" width="382" height="40"/>
@@ -286,16 +286,6 @@
                                                     <constraint firstAttribute="height" constant="80" id="kBs-zU-u3o"/>
                                                 </constraints>
                                             </pickerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-ag-xQY">
-                                                <rect key="frame" x="16" y="689" width="382" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="r58-F4-0U2"/>
-                                                </constraints>
-                                                <state key="normal" title="Generate!"/>
-                                                <connections>
-                                                    <action selector="generateHandler:" destination="rP9-or-F62" eventType="touchUpInside" id="8o0-hW-c91"/>
-                                                </connections>
-                                            </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-25-aGY">
                                                 <rect key="frame" x="0.0" y="289" width="124" height="350"/>
                                                 <subviews>
@@ -468,6 +458,24 @@
                                                     <constraint firstAttribute="height" constant="350" id="u0V-e1-LOn"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76M-1E-ycN">
+                                                <rect key="frame" x="16" y="664" width="382" height="52"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="Nv9-27-uls"/>
+                                                </constraints>
+                                                <state key="normal" title="Generate!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="generateHandler:" destination="rP9-or-F62" eventType="touchUpInside" id="HLy-s6-itF"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -476,23 +484,24 @@
                                             <constraint firstItem="iBN-L0-2Yk" firstAttribute="leading" secondItem="xs3-25-aGY" secondAttribute="trailing" id="1yj-ov-b2l"/>
                                             <constraint firstItem="fFc-gN-l2Z" firstAttribute="top" secondItem="I4b-Aq-9aS" secondAttribute="bottom" id="4QQ-xd-1cG"/>
                                             <constraint firstAttribute="trailing" secondItem="fFc-gN-l2Z" secondAttribute="trailing" constant="16" id="6QC-2l-Gyg"/>
-                                            <constraint firstItem="Kff-ag-xQY" firstAttribute="top" secondItem="xs3-25-aGY" secondAttribute="bottom" constant="50" id="9oD-M9-dZc"/>
+                                            <constraint firstAttribute="trailing" secondItem="76M-1E-ycN" secondAttribute="trailing" constant="16" id="712-yV-KMO"/>
                                             <constraint firstItem="abc-ca-bMn" firstAttribute="top" secondItem="BaN-eu-lR4" secondAttribute="bottom" constant="16" id="AwE-aw-hbg"/>
+                                            <constraint firstItem="76M-1E-ycN" firstAttribute="top" secondItem="iBN-L0-2Yk" secondAttribute="bottom" constant="25" id="Ce5-Za-tQV"/>
                                             <constraint firstAttribute="trailing" secondItem="BaN-eu-lR4" secondAttribute="trailing" constant="16" id="E1K-3J-NbW"/>
+                                            <constraint firstItem="76M-1E-ycN" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="EwE-5u-hht"/>
                                             <constraint firstItem="abc-ca-bMn" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="GMH-E5-snl"/>
-                                            <constraint firstAttribute="bottom" secondItem="Kff-ag-xQY" secondAttribute="bottom" constant="25" id="Gqg-Pz-1bL"/>
                                             <constraint firstItem="fFc-gN-l2Z" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="JFN-DQ-qMu"/>
                                             <constraint firstAttribute="trailing" secondItem="HBF-yK-FDg" secondAttribute="trailing" constant="16" id="NT3-dk-slE"/>
                                             <constraint firstItem="BaN-eu-lR4" firstAttribute="top" secondItem="4Dv-uh-UxW" secondAttribute="top" constant="16" id="QG7-64-Jh9"/>
                                             <constraint firstItem="HBF-yK-FDg" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="QzP-p4-c6n"/>
                                             <constraint firstItem="I4b-Aq-9aS" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="XZC-54-XYM"/>
                                             <constraint firstItem="iBN-L0-2Yk" firstAttribute="top" secondItem="fFc-gN-l2Z" secondAttribute="bottom" id="YMd-2m-YZm"/>
-                                            <constraint firstItem="Kff-ag-xQY" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="bUE-CJ-K4D"/>
                                             <constraint firstAttribute="trailing" secondItem="iBN-L0-2Yk" secondAttribute="trailing" id="fHE-lN-Qyc"/>
                                             <constraint firstItem="BaN-eu-lR4" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" constant="16" id="hGp-XM-RNK"/>
                                             <constraint firstItem="HBF-yK-FDg" firstAttribute="top" secondItem="abc-ca-bMn" secondAttribute="bottom" id="kfw-Im-SgQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="Kff-ag-xQY" secondAttribute="trailing" constant="16" id="lpR-po-QSf"/>
+                                            <constraint firstAttribute="bottom" secondItem="76M-1E-ycN" secondAttribute="bottom" constant="25" id="taU-fG-nyk"/>
                                             <constraint firstItem="I4b-Aq-9aS" firstAttribute="top" secondItem="HBF-yK-FDg" secondAttribute="bottom" constant="16" id="uwk-JW-9EP"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="abc-ca-bMn" secondAttribute="trailing" constant="20" symbolic="YES" id="xdH-Z7-61N"/>
                                             <constraint firstItem="xs3-25-aGY" firstAttribute="leading" secondItem="4Dv-uh-UxW" secondAttribute="leading" id="y7h-zs-ZjC"/>
                                         </constraints>
                                     </view>

@@ -41,6 +41,10 @@ class ApplicationCoordinator {
     private func runNewHeroFlow() {
         charAddView = factory.makeCharacterAddController()
         
+        charAddView?.onBack = { [weak self] in
+            self?.router.popModule()
+        }
+        
         router.push(charAddView)
     }
     

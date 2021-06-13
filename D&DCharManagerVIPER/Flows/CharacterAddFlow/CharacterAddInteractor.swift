@@ -83,6 +83,17 @@ class CharacterAddInteractor {
         }
     }
     
+    func generateHero(name: String?) {
+        guard let name = name, name != "" else {
+            presenter?.makeAlert(error: .emptyName)
+            return
+        }
+        let stats = CharStats(strenght: strength, agility: agility, wisdom: wisdom, luck: luck)
+        let id = "\(name).\(selectedRace.string).\(selectedClass.string)".hash
+        let hero = HeroCharacter(name: name, race: selectedRace, gClass: selectedClass, stats: stats, id: id)
+        presenter?.saveAndExit(hero)
+    }
+    
 }
 
 enum HeroStat {

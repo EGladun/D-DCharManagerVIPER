@@ -36,8 +36,15 @@ class CharacterAddController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         setupModule()
         setupPickers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        interactor?.updateStatValues()
     }
     
     //MARK: Methods
@@ -73,6 +80,12 @@ class CharacterAddController: UIViewController {
         
         luckPlus?.isHidden = model.luckPlus
         luckMinus?.isHidden = model.luckMinus
+    }
+    
+    func showAlert(_ alert: UIAlertController) {
+        self.present(alert, animated: true, completion: {
+            self.nameField?.becomeFirstResponder()
+        })
     }
     
     //MARK: Actions
@@ -113,7 +126,7 @@ class CharacterAddController: UIViewController {
     }
     
     @IBAction func generateHandler(_ sender: Any) {
-        
+        interactor?.generateHero(name: nameField?.text)
     }
     
 }

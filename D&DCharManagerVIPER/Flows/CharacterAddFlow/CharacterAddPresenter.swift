@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class CharacterAddPresenter {
     
@@ -39,6 +40,25 @@ class CharacterAddPresenter {
         controller?.updateViewWith(model: model)
     }
     
+    func saveAndExit(_ hero: HeroCharacter) {
+        let heroDict = hero.toDictionary()
+        let db = Firestore.firestore()
+        db.collection("Characters").addDocument(data: heroDict)
+        controller?.onBack?()
+    }
+    
+    func makeAlert(error: ErrorType) {
+        let alert: UIAlertController?
+        switch error {
+        case .emptyName:
+            alert = UIAlertController(title: "Wrong name", message: "Enter right name, please", preferredStyle: .alert)
+            alert?.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        }
+        
+        guard let alert = alert else { return }
+        controller?.showAlert(alert)
+    }
+    
 }
 
 struct CharacterAddModel {
@@ -55,4 +75,8 @@ struct CharacterAddModel {
     var wsdMinus: Bool
     var luckPlus: Bool
     var luckMinus: Bool
+}
+
+enum ErrorType {
+    case emptyName
 }
