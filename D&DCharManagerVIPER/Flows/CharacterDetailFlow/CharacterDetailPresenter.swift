@@ -13,7 +13,7 @@ class CharacterDetailPresenter {
     open weak var controller: CharacterDetailController?
     
     func makeStructAndLoad(hero: HeroCharacter) {
-        let shareText = "ddcmanvip://\(hero.id)"
+        let shareText = "ddcmanviper://\(hero.id)"
         let model = CharacterDetailModel(classImage: UIImage(named: hero.gClass.string), raceImage: UIImage(named: hero.race.string), name: hero.name, strength: "Strength: \(hero.stats.strenght)", agility: "Agility: \(hero.stats.agility)", wisdom: "Wisdom: \(hero.stats.wisdom)", luck: "Luck: \(hero.stats.luck)", shareText: shareText)
         controller?.setupFromPresenter(data: model)
     }

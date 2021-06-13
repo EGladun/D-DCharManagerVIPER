@@ -17,6 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p0I-jh-dpP">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MsM-9q-NzJ">
+                                <rect key="frame" x="0.0" y="348" width="414" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes list is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-WK-1Zc">
+                                        <rect key="frame" x="16" y="87" width="382" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can create one with plus button on top of the screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nc-t8-YjL">
+                                        <rect key="frame" x="16" y="129.5" width="382" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tyN-WK-1Zc" secondAttribute="trailing" constant="16" id="7a4-kk-svY"/>
+                                    <constraint firstItem="tyN-WK-1Zc" firstAttribute="centerX" secondItem="MsM-9q-NzJ" secondAttribute="centerX" id="Iuj-FV-jcF"/>
+                                    <constraint firstItem="tyN-WK-1Zc" firstAttribute="leading" secondItem="MsM-9q-NzJ" secondAttribute="leading" constant="16" id="T0w-na-yda"/>
+                                    <constraint firstItem="tyN-WK-1Zc" firstAttribute="centerY" secondItem="MsM-9q-NzJ" secondAttribute="centerY" id="btB-hY-8I2"/>
+                                    <constraint firstAttribute="height" constant="200" id="mS1-Sr-wFK"/>
+                                    <constraint firstItem="2nc-t8-YjL" firstAttribute="top" secondItem="tyN-WK-1Zc" secondAttribute="bottom" constant="16" id="r5v-xu-3RY"/>
+                                    <constraint firstAttribute="trailing" secondItem="2nc-t8-YjL" secondAttribute="trailing" constant="16" id="rzw-LU-PgQ"/>
+                                    <constraint firstItem="2nc-t8-YjL" firstAttribute="leading" secondItem="MsM-9q-NzJ" secondAttribute="leading" constant="16" id="tIC-Rl-dXK"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HP1-0L-isy">
                                 <rect key="frame" x="0.0" y="44" width="414" height="40"/>
                                 <subviews>
@@ -44,18 +76,17 @@
                                     <constraint firstAttribute="height" constant="40" id="Mkl-XW-4dj"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p0I-jh-dpP">
-                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cJ4-WD-Va4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MsM-9q-NzJ" firstAttribute="trailing" secondItem="cJ4-WD-Va4" secondAttribute="trailing" id="0Dv-v9-MLR"/>
                             <constraint firstItem="cJ4-WD-Va4" firstAttribute="bottom" secondItem="p0I-jh-dpP" secondAttribute="bottom" id="FtO-v1-qog"/>
                             <constraint firstItem="HP1-0L-isy" firstAttribute="leading" secondItem="cJ4-WD-Va4" secondAttribute="leading" id="Kj2-zU-HRw"/>
                             <constraint firstItem="cJ4-WD-Va4" firstAttribute="trailing" secondItem="HP1-0L-isy" secondAttribute="trailing" id="MvN-QD-zFv"/>
+                            <constraint firstItem="MsM-9q-NzJ" firstAttribute="centerY" secondItem="rfk-CC-mE8" secondAttribute="centerY" id="Qut-bS-ZkN"/>
                             <constraint firstItem="p0I-jh-dpP" firstAttribute="top" secondItem="HP1-0L-isy" secondAttribute="bottom" id="Tcn-NA-9IS"/>
+                            <constraint firstItem="MsM-9q-NzJ" firstAttribute="leading" secondItem="cJ4-WD-Va4" secondAttribute="leading" id="Z4M-4b-6RH"/>
                             <constraint firstItem="cJ4-WD-Va4" firstAttribute="trailing" secondItem="p0I-jh-dpP" secondAttribute="trailing" id="dAp-JT-KxU"/>
                             <constraint firstItem="p0I-jh-dpP" firstAttribute="leading" secondItem="cJ4-WD-Va4" secondAttribute="leading" id="m3N-rO-6oe"/>
                             <constraint firstItem="HP1-0L-isy" firstAttribute="top" secondItem="cJ4-WD-Va4" secondAttribute="top" id="vjg-XJ-XYb"/>
@@ -63,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="charactersTable" destination="p0I-jh-dpP" id="pQs-4t-k8d"/>
+                        <outlet property="emptyView" destination="MsM-9q-NzJ" id="Z9o-U6-IIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0r7-uW-J2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

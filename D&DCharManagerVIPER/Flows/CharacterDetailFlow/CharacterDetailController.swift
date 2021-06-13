@@ -25,6 +25,8 @@ class CharacterDetailController: UIViewController {
     
     var hero: HeroCharacter?
     private var textForSharing: String = "" // Текст для генерации QR-кода
+    
+    private var isSetup: Bool = false
 
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -43,10 +45,19 @@ class CharacterDetailController: UIViewController {
     
     //MARK: Methods
     private func setupModule() {
+        guard !isSetup else {return}
         presenter = CharacterDetailPresenter()
         presenter?.controller = self
         guard presenter != nil else { return }
         interactor = CharacterDetailInteractor(presenter: presenter!)
+        isSetup.toggle()
+    }
+    
+    func loadId(_ id: Int) {
+        if !isSetup {
+            setupModule()
+        }
+        interactor?.loadHeroWith(id: id)
     }
     
     func setupFromPresenter(data: CharacterDetailModel) {

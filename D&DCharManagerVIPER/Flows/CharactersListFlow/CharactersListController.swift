@@ -10,6 +10,7 @@ import UIKit
 class CharactersListController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var charactersTable: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     //MARK: Variables
     var interactor: CharactersListInteractor?
@@ -18,7 +19,11 @@ class CharactersListController: UIViewController {
     var onNewHero: (()->Void)?
     var onHeroDetail: ((HeroCharacter)->Void)?
     
-    var heroesArray: [HeroCharacter] = []
+    var heroesArray: [HeroCharacter] = [] {
+        didSet {
+            emptyView.isHidden = !heroesArray.isEmpty
+        }
+    }
 
     //MARK: Lifecycle
     override func viewDidLoad() {

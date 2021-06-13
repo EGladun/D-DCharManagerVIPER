@@ -24,6 +24,11 @@ class ApplicationCoordinator {
         runListFlow()
     }
     
+    func start(id: Int) {
+        runListFlow()
+        runHeroDetailFlow(hero: nil, id: id)
+    }
+    
     private func runListFlow() {
         charListView = factory.makeCharactersListController()
         
@@ -32,7 +37,7 @@ class ApplicationCoordinator {
         }
         
         charListView?.onHeroDetail = { [weak self] hero in
-            self?.runHeroDetailFlow(hero: hero)
+            self?.runHeroDetailFlow(hero: hero, id: nil)
         }
         
         router.push(charListView)
@@ -48,14 +53,20 @@ class ApplicationCoordinator {
         router.push(charAddView)
     }
     
-    private func runHeroDetailFlow(hero: HeroCharacter) {
+    private func runHeroDetailFlow(hero: HeroCharacter?, id: Int?) {
         charDetailView = factory.makeCharacterDetailController()
         
         charDetailView?.onBack = { [weak self] in
             self?.router.popModule()
         }
         
-        charDetailView?.hero = hero
+        if let hero = hero {
+            charDetailView?.hero = hero
+        }
+        
+        if let id = id {
+            charDetailView?.loadId(id)
+        }
         
         router.push(charDetailView)
     }

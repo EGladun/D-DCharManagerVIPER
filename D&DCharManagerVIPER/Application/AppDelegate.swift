@@ -48,5 +48,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.coordinator = makeCoordinator()
         coordinator?.start()
     }
+    
+    func startWithDeeplink(id: Int) {
+        self.coordinator = makeCoordinator()
+        coordinator?.start(id: id)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.scheme == "ddcmanviper" {
+            if let id = Int(url.host ?? "") {
+                startWithDeeplink(id: id)
+            } else {
+                start()
+            }
+        }
+        return true
+    }
 }
 
