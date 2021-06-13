@@ -44,4 +44,20 @@ class CharactersListInteractor {
         }
     }
     
+    func deleteCharacter(_ index: Int) {
+        let id = charList[index].id
+        let db = Firestore.firestore()
+        db.collection("Characters").whereField("id", isEqualTo: id).getDocuments { (snapshot, error) in
+            if let error = error {
+                self.presenter.makeAlert(title: "Error", message: error.localizedDescription, btnTitle: "Ok")
+            } else {
+                for document in snapshot!.documents {
+                    document.reference.delete()
+                }
+                self.charList.remove(at: index)
+                self.presenter.updateHeroesArray(array: self.charList)
+            }
+        }
+    }
+    
 }

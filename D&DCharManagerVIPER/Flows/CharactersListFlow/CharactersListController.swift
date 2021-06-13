@@ -52,6 +52,10 @@ class CharactersListController: UIViewController {
         heroesArray = data
         charactersTable.reloadData()
     }
+    
+    func showAlert(_ alert: UIAlertController) {
+        self.present(alert, animated: true, completion: nil)
+    }
 
     //MARK: Actions
     @IBAction func plusButtonHandler(_ sender: Any) {
@@ -83,7 +87,7 @@ extension CharactersListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            //
+            interactor?.deleteCharacter(indexPath.row)
         }
     }
 }

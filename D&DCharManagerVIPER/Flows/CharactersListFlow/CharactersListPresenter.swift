@@ -15,4 +15,10 @@ class CharactersListPresenter {
     func updateHeroesArray(array: [HeroCharacter]) {
         controller?.reloadTableView(with: array)
     }
+    
+    func makeAlert(title: String, message: String?, btnTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        controller?.showAlert(alert)
+    }
 }
