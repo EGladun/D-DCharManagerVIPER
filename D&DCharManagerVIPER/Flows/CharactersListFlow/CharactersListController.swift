@@ -24,6 +24,8 @@ class CharactersListController: UIViewController {
             emptyView.isHidden = !heroesArray.isEmpty
         }
     }
+    
+    var refreshControl: UIRefreshControl?
 
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -31,6 +33,7 @@ class CharactersListController: UIViewController {
 
         setupModule()
         setupTable()
+        setupRefreshControl()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,8 +56,21 @@ class CharactersListController: UIViewController {
         charactersTable.registerCellNib(CharacterCell.self)
     }
     
+    /// Настройка лоадера загрузки
+    func setupRefreshControl(){
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.charactersTable?.refreshControl = refreshControl
+    }
+    
+    /// Метод обновления данных в таблице
+    @objc func refresh() {
+        interactor?.fetchCharacters()
+    }
+    
     func reloadTableView(with data: [HeroCharacter]) {
         heroesArray = data
+        refreshControl?.endRefreshing()
         charactersTable.reloadData()
     }
     
